@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twist a Letter</title>
+    <link rel="stylesheet" href="styles/styleBase.css">
+    <link rel="stylesheet" href="styles/styleNivel1.css">
+    <link rel="stylesheet" href="styles/styleJogos.css">
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <script src="scripts/nivel1.js"></script>
+
+</head>
+<body>
+    <audio id="audio_per" src="music/defperda.mp3"></audio>
+    <audio id="audio_vit" src="music/defvitoria.wav"></audio>
+    <audio id="audio_niv" src="music/defniveis.mp3"></audio>
+    <div id="conteudo">
+
+        <div class="modal_vit" id="modal_vit">
+            <div class="modal-inner_vit">
+                <h2>Parabéns você acertou!!</h2>
+                <a href="nivel1.html">Fazer de novo?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="nivel2.html">Próximo nível</a>
+            </div>
+        </div>
+
+        <div class="modal_per" id="modal_per">
+            <div class="modal-inner_per">
+                <h2>Você perdeu =c</h2>
+                <p>A palavra era:</p>
+                <p id="palavra_certa"></p>
+                <a href="nivel1.html">Tentar de novo?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html">Menu</a>
+            </div>
+        </div>
+
+        <header id="header"></header>
+       
+        <section id="main">
+            <nav id="nav">
+                <a href = "index.html"> 
+                    <img src="img/home2.png" alt="HOME">
+                </a>
+            </nav>
+            <div id="game-container">
+
+                <h1>Twist a Letter</h1>
+                <div class="quadro" id="quadro"></div>
+                <p id="messagem"></p>
+                <input type="text" id="caixaAdivinha" maxlength="4" placeholder="Entre com seu palpite" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                <button type="button" id="btnEnvia">Enter</button>
+                <div class="teclado" id="teclado"></div>
+            </div>
+            </div>
+        </section>
+        <footer id="footer">
+
+        </footer>
+
+    </div>
+    
+</body>
+</html>
